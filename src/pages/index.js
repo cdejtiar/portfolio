@@ -7,9 +7,10 @@ import Image from "next/image";
 import profilePic from "../../public/images/profilePic.jpg";
 
 const navigation = [
+  { name: "Inicio", href: "/" },
   { name: "Educación", href: "/educacion" },
   { name: "Experiencia", href: "/experiencia" },
-  { name: "Habilidades", href: "#/habilidades" },
+  { name: "Habilidades", href: "/habilidades" },
   { name: "Mis Trabajos", href: "/trabajos" },
 ];
 
