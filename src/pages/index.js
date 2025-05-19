@@ -7,10 +7,10 @@ import Image from "next/image";
 import profilePic from "../../public/images/profilePic.jpg";
 
 const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
+  { name: "Educación", href: "/educacion" },
+  { name: "Experiencia", href: "/experiencia" },
+  { name: "Habilidades", href: "#/habilidades" },
+  { name: "Mis Trabajos", href: "/trabajos" },
 ];
 
 export default function Example() {
@@ -26,11 +26,6 @@ export default function Example() {
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Camila Dejtiar</span>
-              <img
-                alt=""
-                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-                className="h-8 w-auto"
-              />
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -48,15 +43,18 @@ export default function Example() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm/6 font-semibold text-gray-900"
+                className="relative inline-block text-sm font-semibold text-gray-900 hover:text-purple-900 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-purple-900 after:transition-all after:duration-300 hover:after:w-full"
               >
                 {item.name}
               </a>
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm/6 font-semibold text-gray-900">
-              Log in <span aria-hidden="true">&rarr;</span>
+            <a
+              href="/contacto"
+              className="relative inline-block text-sm font-semibold text-gray-900 hover:text-purple-900 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-purple-900 after:transition-all after:duration-300 hover:after:w-full"
+            >
+              Contáctame <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
         </nav>
@@ -100,10 +98,10 @@ export default function Example() {
                 </div>
                 <div className="py-6">
                   <a
-                    href="#"
+                    href="/contacto"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                   >
-                    Log in
+                    Contáctame
                   </a>
                 </div>
               </div>
@@ -125,12 +123,12 @@ export default function Example() {
             className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#6f3da7] to-[#defffc] opacity-40 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
           />
         </div>
-        <div className="mx-auto max-w-2xl py-32 flex flex-col justify-center sm:py-48 lg:py-56">
-          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+        <div className="mx-auto max-w-2xl py-16 flex flex-col justify-center sm:py-20 lg:py-22">
+          <div className="mb-8 flex justify-center">
             <Image
               src={profilePic}
               alt="Camila Dejtiar"
-              className="relative rounded-full px-3 py-1 text-sm/6 text-gray-600"
+              className="relative rounded-full shadow-[20px_15px_25px_rgba(111,61,167,0.5)]"
               width={200}
             />
           </div>
@@ -144,12 +142,9 @@ export default function Example() {
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="#"
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="rounded-md bg-purple-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-purple-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                Get started
-              </a>
-              <a href="#" className="text-sm/6 font-semibold text-gray-900">
-                Learn more <span aria-hidden="true">→</span>
+                Sobre mí
               </a>
             </div>
           </div>
